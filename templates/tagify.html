@@ -1,0 +1,84 @@
+<!doctype html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Tagify | Tagging Made Easy</title>
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/templates/css/tagifystyle.css">
+
+</head>
+
+<body>
+
+	<header>
+
+	</header>
+
+	<div class="super-container">
+
+		<div class="container">
+
+			<div class="sixteen columns">
+				<div class="row logo">
+					<img src="/templates/img/tagify-logo.png">
+				</div><!-- /.row logo -->
+
+				<div class="row">
+
+					<div class="eight columns alpha">
+
+						<div class="round-box">
+
+							<form id="tagify-form" action="/tagify/post" method="post">
+
+								<h4>Enter a String of Words</h4>
+								<textarea name="user_text">{{user_text}}</textarea>
+								<input type="submit" value="Tagify!">
+
+							</form><!-- /#tagify-form -->
+
+						</div><!-- /.round-box -->
+
+					</div><!-- /.eight columns alpha -->
+
+					<div class="eight columns omega">
+
+						<div class="round-box">
+
+							<div id="output">
+
+								<h4>Your tags:</h4>
+
+								<div class="tag_list">
+									<ul>
+									{% if tags %}
+										{% for tag in tags %}
+											<li>{{tag.name}}</li>
+										{% endfor %}
+									{% endif %}
+									</ul>
+								</div>
+
+							</div>
+
+						</div><!-- /.round-box -->
+
+					</div><!-- /.eight columns omega -->
+
+				</div><!-- /.row -->
+
+			</div><!-- /.sixteen columns -->
+
+		</div><!-- /.container -->
+
+	</div><!-- /.super-container -->
+
+	<footer>
+
+	</footer>
+
+</body>
+
+</html>

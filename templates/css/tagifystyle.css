@@ -1,0 +1,63 @@
+@import url(base.css);
+@import url(layout.css);
+@import url(skeleton.css);
+
+/* BACKGROUND IMAGES
+================================================== */
+body {
+	background: url(../img/classy_fabric_@2X.png);
+}
+
+/* LOGO
+================================================== */
+.logo {
+	text-align: center;
+}
+
+/* TYPOGRAPHY
+================================================== */
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: 'PT Sans Caption', sans-serif;
+}
+
+body {
+	color: #ccc;
+}
+
+h1 {
+	color: #87a541;
+	text-shadow: 1px 1px 1px #333;
+}
+
+h2, h3, h4, h5, h6 {
+	color: #adc378;
+}
+
+/* FORM
+================================================== */
+#tagify-form {
+	padding: 15px;
+}
+
+#tagify-form textarea {
+	width: 90%;
+	background-color: #ccc;
+	color: #403F3B;
+}
+
+#output {
+	padding: 15px;
+}
+
+/* BOXES
+================================================== */
+.round-box {
+	width: 100%;
+	min-height: 300px;
+	background: url(../img/classy_fabric.png);
+    -moz-box-shadow:    inset 0 0 10px #2B2B29;
+   	-webkit-box-shadow: inset 0 0 10px #2B2B29;
+   	box-shadow:         inset 0 0 10px #2B2B29;
+   	border: 0 solid black;
+   	border-radius: 5px;
+}

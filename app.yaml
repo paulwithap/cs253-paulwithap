@@ -1,0 +1,36 @@
+application: cs253-paulwithap
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+# css
+- url: /templates/css
+  static_dir: templates/css
+
+# images
+- url: /templates/img
+  static_dir: templates/img
+
+- url: /birthday.*
+  script: birthday.app
+
+- url: /tagify.*
+  script: tagify.app
+
+- url: /rot13.*
+  script: rot13.app
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.1"
+- name: jinja2
+  version: latest
