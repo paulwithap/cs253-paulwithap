@@ -33,6 +33,7 @@ def tagify(user_text):
 			tag = ""
 	return tag_list
 
+
 class Handler(webapp2.RequestHandler):
     def write(self, *a, **kw):
     	self.response.out.write(*a, **kw)
